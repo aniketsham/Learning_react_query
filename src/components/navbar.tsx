@@ -11,7 +11,7 @@ export default function Navbar({toggleDarkMode}:{toggleDarkMode:()=>void}) {
   const {user}=useSelector((state:RootState)=>state.user);
   return (
     <Box sx={{ flexGrow: 1 }}>
-      <AppBar position="static">
+      <AppBar data-testid="background" position="static">
         <Toolbar>
         
           <Typography variant="h6" component="div" sx={{ flexGrow: 1,textAlign:"left" }}>
@@ -34,7 +34,7 @@ export default function Navbar({toggleDarkMode}:{toggleDarkMode:()=>void}) {
           }
       
           <Link to="/update" className="text-xl p-2"  >Update</Link>
-          <Switch color='default' {...label} onClick={toggleDarkMode} />
+          <Switch data-testid="switch" color='default' {...label} onClick={toggleDarkMode} />
         </Toolbar>
       </AppBar>
     </Box>

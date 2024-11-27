@@ -32,9 +32,9 @@ export const useLoginHook=()=>{
         },
 
         onSuccess:(data:User)=>{
-            console.log(data)
+            
             dispatch(loginUser(data))
-            alert("login Success")
+            
         },
         onError:(error)=>{
 

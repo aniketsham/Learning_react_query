@@ -6,21 +6,34 @@
     "lib": ["ES2020", "DOM", "DOM.Iterable"],
     "module": "ESNext",
     "skipLibCheck": true,
-
+    "types":["vitest/globals"],
     /* Bundler mode */
     "moduleResolution": "Bundler",
     "allowImportingTsExtensions": true,
     "isolatedModules": true,
     "moduleDetection": "force",
     "noEmit": true,
-    "jsx": "react-jsx",
+    
+    /* JSX and React */
+    "jsx": "react-jsx", // For React 17+ JSX transform
+    "esModuleInterop": true, // For seamless module imports
+    "resolveJsonModule": true, // Enable JSON module imports
+    "allowJs": true, // Allows JS files in your project
+    "allowSyntheticDefaultImports": true, // For default imports in modules that don't have them
 
-    /* Linting */
-    "strict": true,
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
-    "noFallthroughCasesInSwitch": true,
-    "noUncheckedSideEffectImports": true
+    /* Strict Type Checking */
+    "strict": true, 
+    "noUnusedLocals": true, 
+    "noUnusedParameters": true, 
+    "noFallthroughCasesInSwitch": true, 
+    "noUncheckedSideEffectImports": true,
+
+    /* Module Resolution */
+   "baseUrl": ".",
+    "paths": {
+      "@/App": ["src/App"]
+    },
+   
   },
-  "include": ["src"]
+  "include": ["src","tests"]
 }

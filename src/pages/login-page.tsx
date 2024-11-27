@@ -25,12 +25,13 @@ const LoginPage = () => {
       const { name, value } = e.target;
       setFormData({ ...formData, [name]: value });
     };
-    const {formError,setFormError,isFormValid,setIsFormValid,submitting,setSubmitting}=useFormValidation()
+    const {formError,setFormError}=useFormValidation()
     const handleSubmit = (e: React.FormEvent) => {
       e.preventDefault();
       loginUser(formData)
       showToast("success","Login Success")
-      navigateTo("/profile")
+        navigateTo("/profile")
+      
     };
     
     useEffect(()=>{
@@ -40,7 +41,7 @@ const LoginPage = () => {
     })
     const {user}=useSelector((state:RootState)=>state.user)
     if (user) {
-        throw new Error("User found already")
+        navigateTo("/profile")
     }
   
     return (

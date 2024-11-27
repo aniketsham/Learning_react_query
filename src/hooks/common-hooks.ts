@@ -53,8 +53,9 @@ export const useIntersectionObserver = (options: IntersectionObserverInit = { ro
 
     const [isInView, setIsInView] = useState(false);
     const targetRef = useRef<HTMLDivElement | null>(null);
-
+    
     useEffect(() => {
+        if (!window.IntersectionObserver) return
         const observer = new IntersectionObserver(([entry]) => {
             setIsInView(entry.isIntersecting);
         }, options);

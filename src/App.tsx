@@ -55,7 +55,8 @@ import ForbiddenPage from './components/Error/forebbiden-link'
         {
           path: "/profile",
 
-          element: <ErrorBoundary fallback={<ForbiddenPage/>}><Profile/></ErrorBoundary>,
+          element: <Profile/>,
+          errorElement:<ForbiddenPage/>
         },
         {
           path: "/charts",

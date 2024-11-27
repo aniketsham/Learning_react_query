@@ -26,9 +26,9 @@ const AddTask = () => {
      </h1>
       
       <div className="flex flex-row justify-center items-center gap-4 pt-10">
-        <input type="text" className="text-black" value={taskName} onChange={(e)=>setTaskName(e.target.value)}>
+        <input type="text" className="text-black" value={taskName} placeholder="taskname" onChange={(e)=>setTaskName(e.target.value)}>
         </input>
-        <input type="text" className="text-black" value={taskDetails} onChange={(e)=>setTaskDetails(e.target.value)}>
+        <input type="text" className="text-black" value={taskDetails} placeholder="taskDetails" onChange={(e)=>setTaskDetails(e.target.value)}>
         </input>
         <Button onClick={handleAddtask} disabled={isLoading}>
             {isLoading ? "Adding..." : "Add Task"}

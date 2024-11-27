@@ -38,6 +38,7 @@ export default function TableList({data}:{data:TaskData[]}) {
           {data.map((row,index) => (
             <TableRow
               key={row._id}
+              data-testid="custom-element"
               sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
             >
                 <TableCell align="right">{index+1}</TableCell>

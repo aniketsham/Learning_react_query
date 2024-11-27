@@ -43,9 +43,9 @@ const ChartsPage = () => {
     <div className="p-10 grid grid-cols-3 gap-5">
       
 
-      <ErrorBoundary fallback={<DataNotFound resetErrorBoundary={()=>{}}/>}>
-          <ErrorThrowing/>
-      </ErrorBoundary>
+    {/* <ErrorBoundary fallback={<DataNotFound resetErrorBoundary={()=>{}}/>}>
+        <ErrorThrowing/>
+    </ErrorBoundary> */}
 
       <ErrorBoundary fallbackRender={({ resetErrorBoundary }) => (
         <DataNotFound resetErrorBoundary={resetErrorBoundary} />
