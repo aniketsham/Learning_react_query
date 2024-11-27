@@ -14,7 +14,7 @@ const CardSection = ({data}:{data:number[][]}) => {
   return (
     <div  >
       
-      <Card sx={{minHeight:"75%"}}>
+      <Card data-testid="charts" sx={{minHeight:"75%"}}>
         <CardContent>
             <ChartCard data={data} type={chartType} chartColor={["#00a6ed", "#427aa1", "#003049"]}/>
          

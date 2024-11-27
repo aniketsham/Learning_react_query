@@ -5,7 +5,7 @@ import { MemoryRouter } from "react-router-dom"
 import store from "../src/services/Reducers/store"
 import { QueryClientProvider, QueryClient } from "react-query"
 import ChartsPage from "../src/pages/charts-page"
-import { error } from "console"
+
 
 const queryClient= new QueryClient()
 
@@ -48,10 +48,17 @@ describe("Card Section Render",()=>{
         </MemoryRouter>)
 
         const errorsButton=screen.getAllByRole("button",{ name: /Show Error/i })
+        
+        const chartsComponent=screen.getAllByTestId("charts")
 
+        expect(chartsComponent[0]).toBeInTheDocument()
+       
         fireEvent.click(errorsButton[0])
-    
+        
+        expect(chartsComponent[0]).not.toBeInTheDocument() // the charts disapper so it should not be document
         
 
     })
+
+
 })

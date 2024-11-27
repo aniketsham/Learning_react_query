@@ -52,7 +52,7 @@ const handleClick = () => {
         
     </ChartValueAxis>  
    
-    <ChartSeries >
+    <ChartSeries data-testid="charts" >
         {
          data && data.map((item,index)=>(
                 <ChartSeriesItem key={index}   type={type} data={item}  stack={true}   color={chartColor[index]}  />

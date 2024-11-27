@@ -51,7 +51,7 @@ const ChartsPage = () => {
         <DataNotFound resetErrorBoundary={resetErrorBoundary} />
       )}
       onReset={handleReset}>
-          <CardSection data={data[0]}/>
+          <CardSection   data={data[0]}/>
       </ErrorBoundary>
 
       <ErrorBoundary fallbackRender={({ resetErrorBoundary }) => (
